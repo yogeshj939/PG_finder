@@ -9,19 +9,25 @@ import { PgServiceService } from './pg-service.service'
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSliderModule} from '@angular/material/slider'
+import { RouterModule } from '@angular/router';
+import { NavigationComponent } from './navigation/navigation.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PgInputComponent,
-    PgDisplayComponent
+    PgDisplayComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    RouterModule.forRoot([
+      { path: 'pgList', component: PgDisplayComponent },
+    ])
   ],
   providers: [PgServiceService],
   bootstrap: [AppComponent]
