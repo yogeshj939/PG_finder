@@ -1,0 +1,17 @@
+
+    <table class="table table-striped" align="center" >
+        <thead>
+          <tr>
+            <th scope="col">PG Id</th>
+            <th scope="col">PG name</th>
+            <th scope="col">Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor= "let pg of pgs">
+            <th scope="row">{{pg.id}}</th>
+            <td>{{pg.pgName}}</td>
+            <td>{{pg.rating}}</td>
+          </tr>
+        </tbody>
+      </table>
